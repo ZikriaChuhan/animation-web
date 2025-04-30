@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@font-face {
+    font-family: 'OtomanopeeOne';
+    src: url('/fonts/OtomanopeeOne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.font-otomanopeeOne {
+    font-family: OtomanopeeOne;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-jost {
+    font-family: "Jost";
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.font-oswald {
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+  .custum-Shadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+.logodiv {
+    padding: 8px 27px;
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.infodiv {
+    padding: 6px 12px;
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+}
+.mailIconDiv {
+    box-shadow: rgba(0, 0, 0, 0.444) 0px 5px 15px;
+}
+
+.centerheaderDiv {
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.headerDiv {
+    padding: 6px 100px;
+}
+.rightHeaderDiv {
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.rightHeaderDiv {
+    font-family: "Oswald";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+.slick-dots .slick-active div {
+    width: 5rem;
+    background-color: #FF0050; 
+  }
+  .slick-dots .slick-active {
+    width: 5rem;
+  }
+
+
+  .project {
+    background-image: url('/shap2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
