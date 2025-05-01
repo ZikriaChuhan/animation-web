@@ -10,6 +10,8 @@ import VideoProduct from "./components/videoproduct";
 import TwoSlider from "./components/twoslider";
 import Carousel from "./components/carousel";
 import Characters from "./components/characters";
+import Ready from "./components/ready";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -23,6 +25,8 @@ export default function Home() {
       <TwoSlider />
       <Carousel />
       <Characters />
+      <Ready />
+      <Footer />
       
     </main>
   );

@@ -35,47 +35,7 @@ const cards = [
     {
         title: "GAMING TRAILER",
         image: gallery5,
-    },
-    // {
-    //     title: "2D ANIMATION",
-    //     image: gallery1,
-    // },
-    // {
-    //     title: "3D ANIMATION",
-    //     image: gallery2,
-    // },
-    // {
-    //     title: "LOGO ANIMATION",
-    //     image: gallery3,
-    // },
-    // {
-    //     title: "GAMING TRAILER",
-    //     image: gallery4,
-    // },
-    // {
-    //     title: "GAMING TRAILER",
-    //     image: gallery5,
-    // },
-    // {
-    //     title: "2D ANIMATION",
-    //     image: gallery1,
-    // },
-    // {
-    //     title: "3D ANIMATION",
-    //     image: gallery2,
-    // },
-    // {
-    //     title: "LOGO ANIMATION",
-    //     image: gallery3,
-    // },
-    // {
-    //     title: "GAMING TRAILER",
-    //     image: gallery4,
-    // },
-    // {
-    //     title: "GAMING TRAILER",
-    //     image: gallery5,
-    // },
+    }
 ];
 
 export default function Gallery() {
