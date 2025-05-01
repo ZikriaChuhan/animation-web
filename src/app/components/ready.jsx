@@ -3,7 +3,7 @@ import "./component.css"
 import Image from "next/image";
 import IMg from "../images/ready/img.png";
 import Jaja from "../images/ready/jaja.png";
-import Jona from "../images/ready/jona.png";
+import Jona from "../images/ready/Jona.png";
 import Shap3 from "../images/ready/shap3.png";
 import Card from "../images/ready/card1.png";
 
