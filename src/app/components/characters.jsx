@@ -5,7 +5,7 @@ import Fb from "../images/characters/fb.png";
 import Insta from "../images/characters/insta.png";
 import Twiter from "../images/characters/twiter.png";
 import Youtube from "../images/characters/youtube.png";
-import Shap1 from "../images/characters/shap1.png";
+import Shap1 from "../images/characters/Shap1.png";
 import Shap2 from "../images/characters/shap2.png";
 import Mickey from "../images/characters/mick2.png";
 import Vanellope from "../images/characters/vanell2.png";
