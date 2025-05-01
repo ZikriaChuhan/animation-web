@@ -79,9 +79,9 @@
   }
 
 
-  .project {
-    background-image: url('/shap2.png');
+  .bannerbg {
+    background-image: url('/bannerbg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center;
   }
