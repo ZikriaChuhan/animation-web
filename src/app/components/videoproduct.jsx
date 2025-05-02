@@ -58,10 +58,10 @@ export default function VideoProduct() {
     };
     return (
         <>
-            <section className="px-40 flex-col  bg-[#FF0050] pb-24 pt-18">
+           <section className=" md:px-40 flex-col  bg-[#FF0050] pb-24 pt-18">
 
-                <div className=" flex justify-between items-center pb-8 pt-4 ">
-                    <h3 className="font-otomanopeeOne text-5xl uppercase text-white">Product Animation</h3>
+                <div className=" flex md:justify-between justify-center gap-3 flex-wrap items-center pb-8 pt-4 ">
+                    <h3 className="font-otomanopeeOne text-5xl uppercase text-center md:text-left text-white">Product Animation</h3>
                     <div className=" text-center gap-2 flex justify-center items-center ">
                         <button className=" bg-[#0066fe] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={previous}>
                             <Image src={SliderArrowL} alt={SliderArrowL} width={32} height={25} className="w-8 " />
