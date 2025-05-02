@@ -11,7 +11,7 @@ import Card from "../images/ready/card1.png";
 export default function Ready() {
     return (
         <>
-        <section className="px-30 pb-20 pt-10 ">
+        <section className="px-30 pb-20 hidden md:flex pt-10 ">
             <div className="flex items-center rounded-4xl p-12 relative bg-[#0066FF]">
                 <Image src={Shap3} alt="shap3" className=" w-[760px] absolute bottom-0 right-0 " />
                 <Image src={Card} alt="card" className="" />
