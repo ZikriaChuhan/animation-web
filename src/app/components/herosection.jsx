@@ -19,7 +19,7 @@ export default function HeroSection() {
   const toggleSlide = () => setIsBlue(prev => !prev);
 
   return (
-    <>
+    <section className=" overflow-x-hidden overflow-y-visible">
       <section className="relative overflow-hidden  w-full text-white ">
         
         <div
@@ -103,6 +103,6 @@ export default function HeroSection() {
         </div>
       </section>
 
-    </>
+    </section>
   );
 }
