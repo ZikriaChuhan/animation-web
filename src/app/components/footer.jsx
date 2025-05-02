@@ -75,7 +75,7 @@ export default function Footer() {
                             <div className="md:p-3 p-1 bg-black md:w-12 md:h-12 w-10 h-10 rounded-full flex justify-center items-center">
                             <Image src={I3} alt="i3" />
                             </div>
-                            <div className="md:p-3 p-1 bg-black md:w-12 md:h-12 w-10 h-102 rounded-full flex justify-center items-center">
+                            <div className="md:p-3 p-1 bg-black md:w-12 md:h-12 w-10 h-10 rounded-full flex justify-center items-center">
                             <Image src={I4} alt="i4" />
                             </div>  
                             <div className="p-3 bg-black w-12 h-12 rounded-full flex justify-center items-center">
