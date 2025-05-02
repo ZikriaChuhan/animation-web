@@ -14,9 +14,9 @@ import BtnArrowR from "../images/heroSection/sliderArrowR.png";
 export default function Footer() {
     return (
         <>
-            <section className=" bg-[#0065FB] p-24 ">
+           <section className=" bg-[#0065FB] md:p-24 p-6  ">
                 <div className=" bg-white rounded-4xl pb-6">
-                    <div className="flex items-center justify-between px-16 py-10">
+                    <div className="flex items-center md:justify-between justify-center flex-wrap gap-3 md:px-16 py-10">
                         <Image src={Logo} alt="logo" className=" w-70" />
                         <button className="mt-6 bg-[#281E3C] font-oswald text-white text-[22px] flex justify-center items-center gap-3 px-3.5 uppercase py-2 rounded-full">Start Your Project Now
                             <span className=" bg-white rounded-full flex justify-center items-center w-8 h-8 p-1.5 ">
@@ -64,7 +64,7 @@ export default function Footer() {
                        </div>
                     </div>
                     <hr className=" mx-16 mt-7" />
-                    <div className=" px-16 flex items-center justify-between mt-3 ">
+                    <div className="flex-wrap px-16 flex items-center justify-between mt-3 ">
                         <div className="flex items-center gap-2">
                             <div className="p-3 bg-black w-12 h-12 rounded-full flex justify-center items-center">
                             <Image src={I1} alt="i1" />
