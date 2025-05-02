@@ -75,27 +75,27 @@ export default function Project() {
 
                 <div className=" relative flex gap-3 justify-center  items-center">
                     <div>
-                        <Image src={Charac} alt="Character" width={589} height={622} className="w-[530px]" />
+                        <Image src={Charac} alt="Character" width={589} height={622} className="md:w-[530px]" />
                     </div>
                     <div className=" relative self-start flex justify-center items-center">
-                        <Image src={Shap1} alt="Shap1" width={264} height={256} className="w-54 " />
-                        <h3 className="font-otomanopeeOne absolute text-center text-[22px] text-white">CAN’T <br /> BELIEVE <br /> WHAT’S NEXT!</h3>
+                        <Image src={Shap1} alt="Shap1" width={264} height={256} className="md:w-54  " />
+                        <h3 className="font-otomanopeeOne absolute text-[10px] text-center md:text-[22px] text-white">CAN’T <br /> BELIEVE <br /> WHAT’S NEXT!</h3>
                     </div>
                 </div>
 
-                <Marquee className="marquee mt-10" autoFill={true} pauseOnClick={true}>
-                    <div className="flex mr-12 gap-2">
-                        <p className="font-otomanopeeOne text-[#44E197] text-8xl">
+                <Marquee className="marquee md:mb-0 -mb-10  md:mt-10" autoFill={true} pauseOnClick={true}>
+                    <div className="flex md:mr-12 mr-8 gap-2">
+                        <p className="font-otomanopeeOne text-[#44E197] text-2xl md:text-8xl">
                             KAMSOFT .
                         </p>
                     </div>
                 </Marquee>
             </section>
 
-            <section className="px-40 flex-col  bg-[#0066fe] pb-24">
+            <section className="md:px-40 flex-col  bg-[#0066fe] pb-24">
 
-                <div className=" flex justify-between items-center pb-8 pt-4 ">
-                    <h3 className="font-otomanopeeOne text-5xl uppercase text-white">Gaming Project</h3>
+                <div className=" flex flex-wrap md:justify-between gap-3 justify-center items-center pb-8 pt-4 ">
+                    <h3 className="font-otomanopeeOne text-center md:text-left text-5xl uppercase text-white">Gaming Project</h3>
                     <div className=" text-center gap-2 flex justify-center items-center ">
                         <button className=" bg-[#FF0050] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={previous}>
                             <Image src={SliderArrowL} alt={SliderArrowL} width={32} height={25} className="w-8 " />
