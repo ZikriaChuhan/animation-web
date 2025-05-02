@@ -25,7 +25,7 @@ export default function Footer() {
                         </button>
                     </div>
 
-                    <div className=" flex justify-between px-16 ">
+                    <div className=" flex flex-wrap gap-8 md:gap-1 justify-between px-16 ">
                        <div>
                        <h2 className="text-5xl mb-6 font-otomanopeeOne uppercase">Services</h2>
                         <ul>
