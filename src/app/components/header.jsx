@@ -33,8 +33,8 @@ export default function Header() {
                 </div>
 
                 <div className="rightHeaderDiv hidden md:flex  justify-center items-center gap-4 ">
-                    <button className=' bg-black text-white rounded-2xl cursor-pointer w-full text-nowrap'>GET A QUOTE</button>
-                    <button className=' bg-black text-white rounded-2xl cursor-pointer w-full'>LIVE CHAT</button>
+                    <button className=' bg-black text-white rounded-2xl cursor-pointer w-full text-nowrap px-4 py-2'>GET A QUOTE</button>
+                    <button className=' bg-black text-white rounded-2xl cursor-pointer w-full px-4 py-2'>LIVE CHAT</button>
                 </div>
             </div>
         </header>
