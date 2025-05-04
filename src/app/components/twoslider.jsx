@@ -3,12 +3,14 @@ import "./component.css"
 import { useRef } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Shap1 from "../images/twoSlider/shap1.png";
 import Arrow from "../images/heroSection/arrow.png";
 import Arrowtop from "../images/twoSlider/arrowtop.png";
 import Arrowdown from "../images/twoSlider/arrowdown.png";
 import Character1 from "../images/twoSlider/character1.png";
-import Character2 from "../images/twoSlider/character2.png";
 import InnerTwoSlider from "./innertwoslider";
 
 export default function TwoSlider() {
@@ -19,6 +21,22 @@ export default function TwoSlider() {
     const previous = () => {
         sliderRef.slickPrev();
     };
+
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.from(".one-slider", {
+            x: 250,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".one-slider",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 1,
+            }
+        });
+    
+      })
 
     const settings = {
         dots: false,
@@ -32,10 +50,14 @@ export default function TwoSlider() {
 
     return (
         <>
+<<<<<<< HEAD
             <section className="bannerbg md:px-60 px-6 flex flex-col gap-12 pt-18 bg-white pb-24">
+=======
+            <section className="bannerbg md:px-60 px-6 flex flex-col gap-12 pt-18 bg-white pb-24 overflow-hidden">
+>>>>>>> 185bad5 (animate)
                 <div>
-                    <div className="flex items-center justify-center rounded-4xl bg-[#FFF000] overflow-hidden ">
-                        <div className=" max-w-[90%]">
+                    <div className="flex items-center justify-center rounded-4xl bg-[#FFF000] overflow-hidden one-slider">
+                        <div className=" max-w-[90%] ">
                             <Slider ref={slider => (sliderRef = slider)} {...settings}>
                                 <div key={1}>
                                     <div className=" bg-[#9B30EF] w-full h-full flex justify-between pl-12 pr-20  items-center relative">

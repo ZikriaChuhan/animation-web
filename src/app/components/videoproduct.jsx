@@ -3,12 +3,17 @@ import "./component.css"
 import { useRef } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SliderArrowR from "../images/gallery/sliderArrowL.png";
 import SliderArrowL from "../images/heroSection/sliderArrowL.png";
 import Arrow from "../images/heroSection/arrow.png";
 import Gif1 from "../images/videoProduct/gif1.gif";
 import Gif2 from "../images/videoProduct/gif2.gif";
 import Gif3 from "../images/videoProduct/gif3.gif";
+import { TextAnimate } from "@/components/magicui/text-animate";
+
 
 const cards = [
     {
@@ -33,6 +38,23 @@ export default function VideoProduct() {
     const previous = () => {
         sliderRef.slickPrev();
     };
+
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.from(".product-animation", {
+            y: 120,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".product-animation",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 1,
+            }
+        });
+    
+      })
 
     const settings = {
         dots: false,
@@ -61,7 +83,15 @@ export default function VideoProduct() {
            <section className=" md:px-40 flex-col  bg-[#FF0050] pb-24 pt-18">
 
                 <div className=" flex md:justify-between justify-center gap-3 flex-wrap items-center pb-8 pt-4 ">
+<<<<<<< HEAD
                     <h3 className="font-otomanopeeOne text-5xl uppercase text-center md:text-left text-white">Product Animation</h3>
+=======
+                    <h3 className="font-otomanopeeOne text-5xl uppercase text-center md:text-left text-white">
+                    <TextAnimate animation="blurInUp" by="character">
+                        Product Animation
+                        </TextAnimate>
+                        </h3>
+>>>>>>> 185bad5 (animate)
                     <div className=" text-center gap-2 flex justify-center items-center ">
                         <button className=" bg-[#0066fe] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={previous}>
                             <Image src={SliderArrowL} alt={SliderArrowL} width={32} height={25} className="w-8 " />
@@ -72,7 +102,7 @@ export default function VideoProduct() {
                         </button>
                     </div>
                 </div>
-                <div className="">
+                <div className=" product-animation">
                     <Slider ref={slider => (sliderRef = slider)} {...settings}>
                         {cards.map((card, index) => (
 

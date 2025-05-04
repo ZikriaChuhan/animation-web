@@ -1,3 +1,6 @@
+"use client"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import Image from 'next/image';
 import MailIcon from '../images/header/mail-icon.png'
 import PhoneIcon from '../images/header/phone-icon.png'
@@ -5,6 +8,31 @@ import "./component.css"
 
 
 export default function Header() {
+
+    useGSAP(() => {
+        gsap.from(".logodiv h2",{
+            x:-800,
+            opacity:0,
+            duration:1,
+            ease:"back.out(1)",
+        })
+        gsap.from(".centerheaderDiv .mailus",{
+            y:-800,
+            opacity:0,
+            duration:1,
+            stagger:0.2,
+            ease:"power2.out",
+        })
+        gsap.from(".rightHeaderDiv button",{
+            scale:0.5,
+            opacity:0,
+            duration:1,
+            stagger:0.2,
+            ease:"bounce.out",
+        })
+
+    })
+
     return (
         <header className='header flex items-center w-full'>
             <div className='logodiv bg-[#281E3C] text-white '>
@@ -12,8 +40,8 @@ export default function Header() {
             </div>
             <div className='headerDiv flex items-center justify-between w-full '>
                 <div className='centerheaderDiv flex items-center gap-4 '>
-                    <div className="hidden md:flex justify-center items-center gap-3 text-gray-700">
-                        <div className='mailIconDiv flex justify-center items-center rounded-full bg-black w-11 h-11'>
+                    <div className="mailus hidden md:flex justify-center items-center gap-3 text-gray-700">
+                        <div className='mailIconDiv hover:scale-[0.9] duration-75 flex justify-center items-center rounded-full bg-black w-11 h-11'>
                             <Image src={MailIcon} alt={MailIcon} width={17} height={17} className=" w-3" />
                         </div>
                         <div className=' text-left'>
@@ -21,8 +49,8 @@ export default function Header() {
                             <span>info@example.com</span>
                         </div>
                     </div>
-                    <div className="hidden md:flex justify-center items-center gap-3 text-gray-700">
-                        <div className='mailIconDiv flex justify-center items-center rounded-full bg-black w-11 h-11'>
+                    <div className="mailus hidden md:flex justify-center items-center gap-3 text-gray-700">
+                        <div className='mailIconDiv hover:scale-[0.9] duration-75 flex justify-center items-center rounded-full bg-black w-11 h-11'>
                             <Image src={PhoneIcon} alt={PhoneIcon} width={17} height={17} className=" w-3" />
                         </div>
                         <div className=' text-left'>
@@ -33,8 +61,13 @@ export default function Header() {
                 </div>
 
                 <div className="rightHeaderDiv hidden md:flex  justify-center items-center gap-4 ">
+<<<<<<< HEAD
                     <button className=' bg-black text-white rounded-2xl cursor-pointer w-full text-nowrap px-4 py-2'>GET A QUOTE</button>
                     <button className=' bg-black text-white rounded-2xl cursor-pointer w-full px-4 py-2'>LIVE CHAT</button>
+=======
+                    <button className='active:scale-[0.9] bg-black text-white rounded-2xl cursor-pointer w-full text-nowrap px-4 py-2'>GET A QUOTE</button>
+                    <button className='active:scale-[0.9] bg-black text-white rounded-2xl cursor-pointer w-full px-4 py-2'>LIVE CHAT</button>
+>>>>>>> 185bad5 (animate)
                 </div>
             </div>
         </header>

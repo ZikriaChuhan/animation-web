@@ -3,11 +3,13 @@ import "./component.css"
 import { useRef } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Shap1 from "../images/twoSlider/shap1.png";
 import Arrow from "../images/heroSection/arrow.png";
 import Arrowtop from "../images/twoSlider/arrowtop.png";
 import Arrowdown from "../images/twoSlider/arrowdown.png";
-import Character1 from "../images/twoSlider/character1.png";
 import Character2 from "../images/twoSlider/character2.png";
 
 export default function InnerTwoSlider() {
@@ -29,10 +31,30 @@ export default function InnerTwoSlider() {
         slidesToScroll: 1
     };
 
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.from(".two-slider", {
+            x: -250,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".two-slider",
+                start: "top 80%",
+                end: "top 50%",
+                scrub: 1,
+            }
+        });
+    
+      })
+
     return (
         <>
             <div>
+<<<<<<< HEAD
                 <div className="flex items-center justify-center rounded-4xl bg-[#FFF000] overflow-hidden ">
+=======
+                <div className="flex items-center justify-center rounded-4xl bg-[#FFF000] overflow-hidden two-slider">
+>>>>>>> 185bad5 (animate)
                     <div className=" bg-[#FFF000] md:px-5 px-2  ">
                         <button className=" bg-[#281E3C] rounded-full ml-4 md:ml-0 cursor-pointer flex justify-center items-center w-10 h-10 md:w-20 md:h-20 p-1 " onClick={previous}>
                             <Image src={Arrowtop} alt="arrowtop" width={32} height={25} className="md:w-8 w-4 " />
@@ -48,7 +70,11 @@ export default function InnerTwoSlider() {
 
                             <div key={1}>
                                 <div className=" bg-[#00AFDC] w-full h-full flex justify-between pl-12 pr-20 py-[2px] items-center relative">
+<<<<<<< HEAD
                                     <Image src={Shap1} alt="Shap1" width={310} height={160} className=" absolute top-0 md:w-60 w-0 " />
+=======
+                                    <Image src={Shap1} alt="Shap1" width={310} height={160} className=" absolute right-10 top-0 md:w-60 w-0 " />
+>>>>>>> 185bad5 (animate)
                                     <Image src={Character2} alt="Character2" width={422} height={689} className=" w-0  md:w-[300px] " />
                                     <div className=" relative md:p-0 py-10 ">
                                         <h3 className="font-otomanopeeOne text-white md:text-8xl text-3xl uppercase">3d</h3>
@@ -67,7 +93,11 @@ export default function InnerTwoSlider() {
 
                             <div key={2}>
                                 <div className=" bg-[#00AFDC] w-full h-full flex justify-between pl-12 pr-20 py-[2px] items-center relative">
+<<<<<<< HEAD
                                     <Image src={Shap1} alt="Shap1" width={310} height={160} className=" absolute top-0 md:w-60 w-0 " />
+=======
+                                    <Image src={Shap1} alt="Shap1" width={310} height={160} className=" absolute right-10 top-0 md:w-60 w-0 " />
+>>>>>>> 185bad5 (animate)
                                     <Image src={Character2} alt="Character2" width={422} height={689} className=" w-0  md:w-[300px] " />
                                     <div className=" relative md:p-0 py-10 ">
                                         <h3 className="font-otomanopeeOne text-white md:text-8xl text-3xl uppercase">2d</h3>

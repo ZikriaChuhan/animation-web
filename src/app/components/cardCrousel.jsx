@@ -2,6 +2,9 @@
 import "./component.css"
 import Image from "next/image";
 import Slider from "react-slick";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Card1 from "../images/heroSection/card1.png";
 import Card2 from "../images/heroSection/card2.png";
 import Card3 from "../images/heroSection/card3.png";
@@ -9,6 +12,22 @@ import Card4 from "../images/heroSection/card4.png";
 
 const cards = [
     {
+        title: "3D ANIMATION",
+        image: Card2,
+    },
+    {
+        title: "2D ANIMATION",
+        image: Card1,
+    },
+    {
+        title: "GAMING TRAILER",
+        image: Card4,
+    },
+    {
+        title: "LOGO ANIMATION",
+        image: Card3,
+    },
+    {
         title: "2D ANIMATION",
         image: Card1,
     },
@@ -25,45 +44,45 @@ const cards = [
         image: Card4,
     },
     {
-        title: "2D ANIMATION",
-        image: Card1,
-    },
-    {
-        title: "3D ANIMATION",
-        image: Card2,
-    },
-    {
         title: "LOGO ANIMATION",
         image: Card3,
-    },
-    {
-        title: "GAMING TRAILER",
-        image: Card4,
     },
     {
         title: "2D ANIMATION",
         image: Card1,
     },
     {
-        title: "3D ANIMATION",
-        image: Card2,
-    },
-    {
-        title: "LOGO ANIMATION",
-        image: Card3,
-    },
-    {
         title: "GAMING TRAILER",
         image: Card4,
     },
+    {
+        title: "3D ANIMATION",
+        image: Card2,
+    },
+
 ];
-
-
 
 export default function CardCarousel() {
 
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.from(".cardCrousel", {
+            y: 120,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".cardCrousel",
+                start: "top 70%",
+                end: "top 50%",
+                scrub: 1,
+            }
+        });
+    });
+
     const settings = {
         dots: true,
+        autoplay: true,
         infinite: true,
         speed: 500,
         slidesToShow: 4,
@@ -81,7 +100,7 @@ export default function CardCarousel() {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1 },
+                settings: { slidesToShow: 1, slidesToScroll: 1, dots: false },
             },
         ],
         appendDots: dots => (
@@ -99,9 +118,9 @@ export default function CardCarousel() {
     return (
         <>
 
-            <div className="w-full bg-white -mt-74 md:px-44 px-8 py-8">
+            <div className="w-full  bg-white -mt-74 md:px-44 px-8 py-8">
 
-                <div className="relative">
+                <div className="relative cardCrousel">
                     <Slider {...settings}>
                         {cards.map((card, index) => (
                             <div key={index} className="px-2">
