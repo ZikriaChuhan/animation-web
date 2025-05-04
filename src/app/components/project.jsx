@@ -135,88 +135,73 @@ export default function Project() {
         <>
             <section className="relative bg-white pt-24 pb-10 ">
                 <Image src={Shap2} alt="Shap2" width={1920} height={665} className="w-full absolute bottom-0" />
-
-                <div className=" relative flex gap-3 justify-center  items-center">
+    
+                <div className=" relative flex gap-3 justify-center items-center">
                     <div>
-<<<<<<< HEAD
-                        <Image src={Charac} alt="Character" width={589} height={622} className="md:w-[530px]" />
-                    </div>
-                    <div className=" relative self-start flex justify-center items-center">
-                        <Image src={Shap1} alt="Shap1" width={264} height={256} className="md:w-54  " />
-                        <h3 className="font-otomanopeeOne absolute text-[10px] text-center md:text-[22px] text-white">CAN’T <br /> BELIEVE <br /> WHAT’S NEXT!</h3>
-                    </div>
-                </div>
-
-                <Marquee className="marquee md:mb-0 -mb-10  md:mt-10" autoFill={true} pauseOnClick={true}>
-                    <div className="flex md:mr-12 mr-8 gap-2">
-                        <p className="font-otomanopeeOne text-[#44E197] text-2xl md:text-8xl">
-                            KAMSOFT .
-                        </p>
-                    </div>
-                </Marquee>
-=======
                         <Image src={Charac} alt="Character" width={589} height={622} className="Charac md:w-[530px]" />
                     </div>
                     <div className=" relative self-start flex justify-center items-center">
-                        <Image src={Shap1} alt="Shap1" width={264} height={256} className="prodShap1 md:w-54  " />
-                        <h3 className="cant-text font-otomanopeeOne absolute text-[10px] text-center md:text-[22px] text-white">CAN’T <br /> BELIEVE <br /> WHAT’S NEXT!</h3>
+                        <Image src={Shap1} alt="Shap1" width={264} height={256} className="prodShap1 md:w-54" />
+                        <h3 className="cant-text font-otomanopeeOne absolute text-[10px] text-center md:text-[22px] text-white">
+                            CAN’T <br /> BELIEVE <br /> WHAT’S NEXT!
+                        </h3>
                     </div>
                 </div>
-
-                <VelocityScroll numRows={1} className="font-otomanopeeOne text-[#44E197] md:mb-0 -mb-10  md:mt-10 text-3xl md:text-8xl" >KAMSOFT .</VelocityScroll>
->>>>>>> 185bad5 (animate)
+    
+                <VelocityScroll
+                    numRows={1}
+                    className="font-otomanopeeOne text-[#44E197] md:mb-0 -mb-10 md:mt-10 text-3xl md:text-8xl"
+                >
+                    KAMSOFT .
+                </VelocityScroll>
             </section>
-
-            <section className="md:px-40 flex-col  bg-[#0066fe] pb-24">
-
-<<<<<<< HEAD
-                <div className=" flex flex-wrap md:justify-between gap-3 justify-center items-center pb-8 pt-4 ">
-                    <h3 className="font-otomanopeeOne text-center md:text-left text-5xl uppercase text-white">Gaming Project</h3>
-=======
-                <div className=" flex flex-wrap md:justify-between gap-3 justify-center px-14 md:px-0 items-center pb-8 pt-4 ">
+    
+            <section className="md:px-40 flex-col bg-[#0066fe] pb-24">
+                <div className="flex flex-wrap md:justify-between gap-3 justify-center px-14 md:px-0 items-center pb-8 pt-4">
                     <h3 className="font-otomanopeeOne text-center md:text-left text-5xl uppercase text-white">
                         <TextAnimate animation="blurInUp" by="character">
                             Gaming Project
                         </TextAnimate>
                     </h3>
->>>>>>> 185bad5 (animate)
-                    <div className=" text-center gap-2 flex justify-center items-center ">
-                        <button className=" bg-[#FF0050] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={previous}>
-                            <Image src={SliderArrowL} alt={SliderArrowL} width={32} height={25} className="w-8 " />
-
+                    <div className="text-center gap-2 flex justify-center items-center">
+                        <button
+                            className="bg-[#FF0050] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1"
+                            onClick={previous}
+                        >
+                            <Image src={SliderArrowL} alt="Previous" width={32} height={25} className="w-8" />
                         </button>
-                        <button className=" bg-[#281E3C] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={next}>
-                            <Image src={SliderArrowR} alt={SliderArrowR} width={32} height={25} className="w-8 " />
+                        <button
+                            className="bg-[#281E3C] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1"
+                            onClick={next}
+                        >
+                            <Image src={SliderArrowR} alt="Next" width={32} height={25} className="w-8" />
                         </button>
                     </div>
                 </div>
-                <div className=" product-slider">
+    
+                <div className="product-slider">
                     <Slider ref={slider => (sliderRef = slider)} {...settings}>
                         {cards.map((card, index) => (
-
                             <div key={index} className="px-2">
-                                <div className="rounded-xl overflow-hidden shadow-lg relative" >
+                                <div className="rounded-xl overflow-hidden shadow-lg relative">
                                     <Image src={card.image} alt={card.title} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent flex items-end justify-center text-center p-4">
                                         <h3 className="text-white font-otomanopeeOne text-4xl">{card.title}</h3>
                                     </div>
                                 </div>
                             </div>
-
                         ))}
                     </Slider>
                 </div>
-
-                <div className=" flex justify-center items-center mt-4">
-                    <button className="mt-2 bg-white font-oswald text-black text-[14px]  flex justify-center items-center gap-3 px-3.5 uppercase py-2 rounded-full">Start Your Project Now
-                        <span className=" custum-Shadow  bg-black rounded-full text-white flex justify-center items-center w-6 h-6 p-1.5 ">
-                            <Image src={Arrow} alt={Arrow} width={17} height={17} className="" />
+    
+                <div className="flex justify-center items-center mt-4">
+                    <button className="mt-2 bg-white font-oswald text-black text-[14px] flex justify-center items-center gap-3 px-3.5 uppercase py-2 rounded-full">
+                        Start Your Project Now
+                        <span className="custum-Shadow bg-black rounded-full text-white flex justify-center items-center w-6 h-6 p-1.5">
+                            <Image src={Arrow} alt="Arrow" width={17} height={17} />
                         </span>
                     </button>
                 </div>
-
-
-
             </section>
         </>
     );

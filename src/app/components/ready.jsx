@@ -41,24 +41,18 @@ export default function Ready() {
     });
     return (
         <>
-        <section className="px-30 pb-20 hidden md:flex pt-10 ">
-<<<<<<< HEAD
-            <div className="flex items-center rounded-4xl p-12 relative bg-[#0066FF]">
-=======
-            <div className="ready-blueBox flex items-center rounded-4xl p-12 relative bg-[#0066FF]">
->>>>>>> 185bad5 (animate)
-                <Image src={Shap3} alt="shap3" className=" w-[760px] absolute bottom-0 right-0 " />
-                <Image src={Card} alt="card" className="imge" />
-                <div className=" relative z-10 flex items-center justify-center pl-20 pr-40 ">
-                <Image src={IMg} alt="img" className="imge" />
-                <Image src={Jaja} alt="jaja" className="imge -mb-32" />
-                </div>
-                
+            <section className="px-30 pb-20 hidden md:flex pt-10">
+                <div className="ready-blueBox flex items-center rounded-4xl p-12 relative bg-[#0066FF]">
+                    <Image src={Shap3} alt="shap3" className="w-[760px] absolute bottom-0 right-0" />
+                    <Image src={Card} alt="card" className="imge" />
+                    <div className="relative z-10 flex items-center justify-center pl-20 pr-40">
+                        <Image src={IMg} alt="img" className="imge" />
+                        <Image src={Jaja} alt="jaja" className="imge -mb-32" />
+                    </div>
                     <Image src={Jona} alt="jona" className="imge absolute -bottom-16 w-[670px] -right-18" />
-                
-
-            </div>
-        </section>
+                </div>
+            </section>
         </>
     );
+    
 }

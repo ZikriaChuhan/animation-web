@@ -80,34 +80,29 @@ export default function VideoProduct() {
     };
     return (
         <>
-           <section className=" md:px-40 flex-col  bg-[#FF0050] pb-24 pt-18">
-
-                <div className=" flex md:justify-between justify-center gap-3 flex-wrap items-center pb-8 pt-4 ">
-<<<<<<< HEAD
-                    <h3 className="font-otomanopeeOne text-5xl uppercase text-center md:text-left text-white">Product Animation</h3>
-=======
+            <section className="md:px-40 flex-col bg-[#FF0050] pb-24 pt-18">
+                <div className="flex md:justify-between justify-center gap-3 flex-wrap items-center pb-8 pt-4">
                     <h3 className="font-otomanopeeOne text-5xl uppercase text-center md:text-left text-white">
-                    <TextAnimate animation="blurInUp" by="character">
-                        Product Animation
+                        <TextAnimate animation="blurInUp" by="character">
+                            Product Animation
                         </TextAnimate>
-                        </h3>
->>>>>>> 185bad5 (animate)
-                    <div className=" text-center gap-2 flex justify-center items-center ">
-                        <button className=" bg-[#0066fe] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={previous}>
-                            <Image src={SliderArrowL} alt={SliderArrowL} width={32} height={25} className="w-8 " />
-
+                    </h3>
+    
+                    <div className="text-center gap-2 flex justify-center items-center">
+                        <button className="bg-[#0066fe] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1" onClick={previous}>
+                            <Image src={SliderArrowL} alt="Slider Arrow Left" width={32} height={25} className="w-8" />
                         </button>
-                        <button className=" bg-[#281E3C] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1 " onClick={next}>
-                            <Image src={SliderArrowR} alt={SliderArrowR} width={32} height={25} className="w-8 " />
+                        <button className="bg-[#281E3C] rounded-full cursor-pointer flex justify-center items-center w-20 h-20 p-1" onClick={next}>
+                            <Image src={SliderArrowR} alt="Slider Arrow Right" width={32} height={25} className="w-8" />
                         </button>
                     </div>
                 </div>
-                <div className=" product-animation">
+    
+                <div className="product-animation">
                     <Slider ref={slider => (sliderRef = slider)} {...settings}>
                         {cards.map((card, index) => (
-
                             <div key={index} className="px-2 w-full">
-                                <div className="w-full mydiv aspect-[4/3] relative rounded-xl overflow-hidden"> 
+                                <div className="w-full mydiv aspect-[4/3] relative rounded-xl overflow-hidden">
                                     <Image
                                         src={card.image}
                                         alt={card.title}
@@ -117,19 +112,18 @@ export default function VideoProduct() {
                                     />
                                 </div>
                             </div>
-
                         ))}
                     </Slider>
                 </div>
-
-                <div className=" flex justify-center items-center mt-4">
-                    <button className="mt-2 bg-white font-oswald text-black text-[14px]  flex justify-center items-center gap-3 px-3.5 uppercase py-2 rounded-full">Start Your Project Now
-                        <span className=" custum-Shadow  bg-black rounded-full text-white flex justify-center items-center w-6 h-6 p-1.5 ">
-                            <Image src={Arrow} alt={Arrow} width={17} height={17} className="" />
+    
+                <div className="flex justify-center items-center mt-4">
+                    <button className="mt-2 bg-white font-oswald text-black text-[14px] flex justify-center items-center gap-3 px-3.5 uppercase py-2 rounded-full">
+                        Start Your Project Now
+                        <span className="custum-Shadow bg-black rounded-full text-white flex justify-center items-center w-6 h-6 p-1.5">
+                            <Image src={Arrow} alt="Arrow" width={17} height={17} className="" />
                         </span>
                     </button>
                 </div>
-
             </section>
         </>
     );
